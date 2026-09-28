@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Я люблю котят</title>
+    <style>
+      /* Настройки для всей страницы */
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f3f0; /* Нежный пастельный фон */
+        color: #333333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      /* Красивая карточка по центру */
+      .card {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 20px; /* Скругленные углы */
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Мягкая тень */
+        text-align: center;
+        max-width: 450px;
+        width: 100%;
+      }
+
+      /* Стильный заголовок */
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #4a3e3d;
+      }
+
+      /* Стили для контейнера картинки */
+      .img-container {
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 15px; /* Скругление для самой картинки */
+        transition: transform 0.3s ease; /* Эффект плавного движения */
+        width: 100%;
+      }
+
+      /* Эффект при наведении курсора на картинку */
+      .img-container:hover {
+        transform: scale(1.03); /* Картинка слегка увеличивается */
+      }
+
+      /* Настройки самого изображения */
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 450px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="card">
+      <h1>Я люблю котят</h1>
+      
+      <!-- Контейнер с вашей загруженной картинкой рыжего котенка -->
+      <div class="img-container">
+        <img src="ginger%20kitten.jpg" alt="Рыжий котенок"/>
+      </div>
+    </div>
+
+  </body>
+</html>
