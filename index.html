@@ -99,12 +99,14 @@
       <button class="meow-btn" onclick="playMeow()">Мяукнуть! 🐾</button>
     </div>
 
-    <!-- Скрипт, который воспроизводит звук при нажатии -->
+    <!-- Скрипт, который берет локальный звук из вашего репозитория -->
     <script>
       function playMeow() {
-        // Берем открытый и надежный аудиофайл короткого мяуканья
-        const audio = new Audio('https://google.com');
-        audio.play();
+        // Указываем просто имя файла, так как он лежит в той же папке
+        const audio = new Audio('meow.mp3');
+        audio.play().catch(function(error) {
+           console.log("Браузер ожидает действия пользователя на странице перед воспроизведением звука.");
+        });
       }
     </script>
 
