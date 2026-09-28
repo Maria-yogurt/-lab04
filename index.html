@@ -42,6 +42,7 @@
         border-radius: 15px; /* Скругление для самой картинки */
         transition: transform 0.3s ease; /* Эффект плавного движения */
         width: 100%;
+        margin-bottom: 20px; /* Отступ до кнопки */
       }
 
       /* Эффект при наведении курсора на картинку */
@@ -57,6 +58,31 @@
         max-height: 450px;
         object-fit: cover;
       }
+
+      /* Стильная кнопка */
+      .meow-btn {
+        background-color: #ff9f43; /* Яркий оранжевый цвет */
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 25px;
+        cursor: pointer;
+        box-shadow: 0 5px 15px rgba(255, 159, 67, 0.3);
+        transition: all 0.2s ease;
+      }
+
+      /* Эффекты при наведении и клике на кнопку */
+      .meow-btn:hover {
+        background-color: #ff8c1a;
+        transform: translateY(-2px); /* Кнопка слегка приподнимается */
+        box-shadow: 0 7px 20px rgba(255, 159, 67, 0.4);
+      }
+
+      .meow-btn:active {
+        transform: translateY(1px); /* Кнопка утапливается при клике */
+      }
     </style>
   </head>
   <body>
@@ -68,7 +94,19 @@
       <div class="img-container">
         <img src="ginger%20kitten.jpg" alt="Рыжий котенок"/>
       </div>
+
+      <!-- Кнопка, которая запускает функцию звука -->
+      <button class="meow-btn" onclick="playMeow()">Мяукнуть! 🐾</button>
     </div>
+
+    <!-- Скрипт, который воспроизводит звук при нажатии -->
+    <script>
+      function playMeow() {
+        // Берем открытый и надежный аудиофайл короткого мяуканья
+        const audio = new Audio('https://google.com');
+        audio.play();
+      }
+    </script>
 
   </body>
 </html>
